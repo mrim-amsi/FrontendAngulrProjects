@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+.Icon_simple-dribbble{
+    overflow: visible;
+    position: absolute;
+    width: 28.508px;
+    height: 28.508px;
+    top: 289px;
+    transform: matrix(1,0,0,1,0,0);
+}
+.Icon_awesome-twitter {
+    overflow: visible;
+    position: absolute;
+    width: 28.508px;
+    height: 23.154px;
+    /*left: 44.899px;*/
+    top: 291.677px;
+    transform: matrix(1,0,0,1,0,0);
+}
+.Icon_awesome-behance {
+    overflow: visible;
+    position: absolute;
+    width: 32.071px;
+    height: 20.106px;
+    /*left: 89.929px;*/
+    top: 291.376px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Icon_simple-dribbble ,#Icon_awesome-twitter,#Icon_awesome-behance {
+    fill: rgba(141,147,171,0.702);
+}
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 300px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+@media screen and (min-width: 700px) {
+
+#profile {
+    position: absolute;}
+}
+#profile {
+    width: 200px;
+    /*height: 317.508px;*/
+    left: 50px;
+    top: 50px;
+    overflow: visible;
+}
+#Creative_Director {
+    top: 248px;
+    position: absolute;
+    overflow: visible;
+    width: 76px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    color: rgba(63,61,86,0.702);
+}
+#John_Smith {
+    white-space: nowrap;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgba(63,61,86,1);
+}
+#yourmailexamplecom {
+    top: 266px;
+    position: absolute;
+    overflow: visible;
+    width: 123px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    color: rgba(63,61,86,0.702);
+}
+#Rectangle_3 {
+    opacity: 0.15;
+    fill: transparent;
+    stroke: rgba(112,112,112,1);
+    stroke-width: 4px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-dasharray: 15;
+    stroke-dashoffset: 0;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+
+.Rectangle_3 {
+    /*position: absolute;*/
+    overflow: visible;
+    width: 915px;
+    height: 405px;
+    left: 0px;
+    top: 0px;
+}
+
+  #Rectangle_3 {
+    width: inherit;
+  } 
+  @media screen and (max-width: 700px) {
+ .Rectangle_3 {
+    width: 100%;
+  }
+   
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <center>  <div id="profile">
+    <img id="" src="images/Rectangle_2.png" srcset="images/Rectangle_2.png 1x, images/Rectangle_2@2x.png 2x">
+        
+      <div id="John_Smith">
+        <span>John Smith</span>
+      </div>
+      <div id="Creative_Director">
+        <span>Creative Director</span>
+      </div>
+      <div id="yourmailexamplecom">
+        <span>yourmail@example.com</span>
+      </div>
+      <div style="margin-top: 50px;margin-right: 90px;">
+        <img id="" src="images/Icon simple-dribbble.png" >
+        <img id="" src="images/Icon awesome-twitter.png" >
+        <img id="" src="images/Icon awesome-behance.png" >
+      </div>
+            
+
+      </center>
+    </div>
+</div> 
+
+<div class="content">
+  <h2>Responsive Sidebar Example</h2>
+ 
+ <svg class="Rectangle_3">
+      <rect id="Rectangle_3" rx="0" ry="0" x="0" y="0" height="405">
+      </rect>
+    </svg>
+
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html>

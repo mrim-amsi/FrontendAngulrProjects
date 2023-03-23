@@ -1,0 +1,85 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form [formGroup]="profileForm"  (ngSubmit)="onSubmit()">
+       <label for="name">Name: </label>
+          <input class="form-control" name="name" formControlName="name" type="text"  />
+           <p class="text-danger" *ngIf=" name.touched && name.errors?.['required']">
+              name field is required
+            </p>
+            <p class="text-danger" *ngIf="name.errors?.['nameIsForbidden']">
+              test is not allowed
+            </p>
+            <label>Email</label>
+            <input
+              class="form-control"
+              formControlName="email"
+              name="email"
+              type="text"
+            />
+            <p
+              class="text-danger"
+              *ngIf="
+                !profileForm.get('email')!.valid &&
+                profileForm.get('email')!.touched
+              "
+            >
+              Please enter valid email
+            </p>
+  <!-- <div class="mb-3">
+    <select class="form-select" formControlName="status">
+      <option value="stabel">stabel</option>
+      <option value="finish">finish</option>
+    </select>
+  </div> -->
+
+  <div class="mb-3">
+    <select class="form-select" formControlName="status">
+      <option  *ngFor="let stat of status" value="stat">{{stat}}</option>
+    </select>
+  </div>
+  
+  <div class="mb-3" formArrayName="hobbies">
+    <p>Hobbies</p>
+    <button type="button" (click)="onAddHobby()" class="btn btn-light">
+      Add Hobby
+    </button>
+
+    <div
+      class="mb-3"
+      *ngFor="let hobby of hobbies.controls; let i = index"
+    >
+      <input
+        type="text"
+        class="form-control"
+        id="hobby-{{ i }}"
+        [formControlName]="i"
+      />
+      <p class="text-danger" *ngIf="!hobby.valid && hobby.touched">
+        Please enter valid text
+      </p>
+    </div>
+  </div>
+  <!-- <h5 *ngIf="!profileForm.valid && profileForm.touched" class="text-danger">
+    Please check your inputs
+  </h5> -->
+  <button class="btn btn-primary" type="submit">Submit</button>  </form>
+</div>
+</div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

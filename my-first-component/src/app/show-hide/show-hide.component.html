@@ -1,0 +1,7 @@
+<button (click)="showHide()">submit</button>
+<p *ngIf="disableEl">show-hide works!</p>
+
+
+<p *ngFor="let el of myarry"  [ngStyle]="{'background-color': el >= 5 ? 'white' : 'red'}">
+    {{el}}
+  </p>

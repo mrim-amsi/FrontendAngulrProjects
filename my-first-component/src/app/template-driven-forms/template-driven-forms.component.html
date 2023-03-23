@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-8">
+        <form (ngSubmit)="onSubmit()" #f="ngForm">
+          <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+            <div class="mb-3">
+              <label class="form-label" for="username"> Username </label>
+              <input
+                type="text"
+                class="form-control"
+                name="username"
+                id="username"
+                ngModel
+                required
+              />
+            </div>
+            <div>
+              <button
+                class="btn btn-light"
+                type="button"
+                (click)="suggestUserName()"
+              >
+                Suggest an Username
+              </button>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="email">Mail</label>
+              <input
+                type="text"
+                class="form-control"
+                name="email"
+                id="email"
+                ngModel
+                required
+                email
+                #email="ngModel"
+              />
+              <span class="text-danger" *ngIf="!email.valid && email.touched"
+                >Please enter valid email</span
+              >
+            </div>
+            <p class="text-danger" *ngIf="!userData.valid && userData.touched">
+              User Data is invalid !
+            </p>
+          </div>
+          <div class="mb-3">
+            <select
+              name="secret"
+              id="secret"
+              [ngModel]="defaultQuestion"
+              class="form-select"
+            >
+              <option value="pet">Your first pet?</option>
+              <option value="teacher">Your first teacher?</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <textarea
+              class="form-control"
+              name="questionAnswer"
+              [(ngModel)]="answer"
+            ></textarea>
+            <p>Your replay is : {{ answer }}</p>
+          </div>
+          <div class="mb-3">
+            <div class="radio" *ngFor="let gender of genders">
+              <label>
+                <input type="radio" name="gender" ngModel [value]="gender" />
+                {{ gender }}
+              </label>
+            </div>
+          </div>
+          <button type="submit" [disabled]="!f.valid" class="btn btn-primary">
+            Submit
+          </button>
+        </form>
+        <hr />
+      </div>
+    </div>
+    <div class="row justify-content-center" *ngIf="submitted">
+      <div class="col-md-8">
+        <h3>Your Data :</h3>
+        <p>Username : {{ user.username }}</p>
+        <p>mail : {{ user.email }}</p>
+        <p>secret :{{ user.secret }}</p>
+        <p>Answer : {{ user.answer }}</p>
+        <p>Gender : {{ user.gender }}</p>
+      </div>
+    </div>
+  </div>

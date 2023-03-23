@@ -1,0 +1,30 @@
+<div class=" m-5 justify-content-center">
+    <form #ff="ngForm" (ngSubmit)="onSubmit(ff)">
+      <!-- ngModel  #ngForm1="ngModel" name="ngForm1" -->
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email"  ngModel required #email="ngModel" email>
+        <small id="emailHelp" class="form-text text-muted" *ngIf="!email.valid && email.touched"> email is not valid.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required ngModel #password="ngModel">
+      </div>
+      <!-- <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div> -->
+      <select class="form-select" aria-label="Default select example" name="select" [ngModel]="'2'"  required ngModel #select="ngModel">
+        <option selected value="1">basic</option>
+        <option value="2">adv</option>
+        <option value="3">pro</option>
+      </select>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <!-- <div *ngIf="email.valid && password.valid && select.valid"> -->
+    <div *ngIf="submitted &&email.valid && password.valid && select.valid">
+    email text :{{emailtext}}<br>
+    password text :{{passtext}}<br>
+    select text :{{selecttext}}<br>
+    </div>
+    </div>

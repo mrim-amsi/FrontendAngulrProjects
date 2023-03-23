@@ -1,0 +1,5 @@
+<div class="alert alert-success alert-dismissible" [ngClass]="type">
+    <button type="button" (click)="close()" class="close" data-dismiss="alert">&times;</button>
+    <strong>Success!</strong> Indicates a successful or positive action.
+    <ng-content></ng-content>
+  </div>

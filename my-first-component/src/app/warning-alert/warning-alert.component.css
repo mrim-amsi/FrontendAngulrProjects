@@ -1,0 +1,8 @@
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+.alert-dismissible {
+    padding-right: 4rem;
+}

@@ -1,0 +1,7 @@
+<!-- <input type="text" (input)="isEmpty($event)"> -->
+<input type="text" [(ngModel)]="textValue"> 
+
+<button [disabled]="isEmpty()" (click)="reset()">submit</button>
+<button [disabled]="isEmpty()" (click)="textValue= ''">submit</button>
+
+{{textValue}}
