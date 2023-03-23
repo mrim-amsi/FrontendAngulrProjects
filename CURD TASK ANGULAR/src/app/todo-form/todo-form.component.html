@@ -1,0 +1,11 @@
+<h1>Add new task</h1>
+<!-- form -->
+<label>Task Title:</label>
+<input type="text" class="form-control" [(ngModel)]="newTaskTitle" />
+<label>Task Content:</label>
+<input type="text" class="form-control" [(ngModel)]="newTaskContent" />
+<input type="checkbox" [(ngModel)]="isImportant" > Check <br>
+<br />
+<button type="submit" class="btn btn-primary" (click)="onAddTask()">
+  Add task
+</button>

@@ -1,0 +1,12 @@
+div.NavContent {
+    margin-left: 300px;
+
+}
+@media screen and (max-width: 700px){
+div.NavContent {
+    margin-left: 0;
+}}
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: #f8f9fa!important;
+}

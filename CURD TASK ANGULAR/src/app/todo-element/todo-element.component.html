@@ -1,0 +1,20 @@
+<div class="card"  [ngStyle]="{'background-color':task.isImportant?'#d3d3ff':'white','border':' 5px solid black'}">
+  
+<div class="card-header">{{task.title}}</div>
+
+  <div class="card-body">
+    <strong > {{ task.content }}</strong>
+  </div>
+  <button type="submit" class="btn btn-dark" (click)="onRemoveTask()">
+    Remove task
+  </button>
+  <button class="btn btn-secondary btn-xs" (click)="editTask()"> Edit </button>
+  <div class="form-popup" id="myForm" *ngIf="disableEl">
+    <form action="/action_page.php" class="form-container">
+      <input type="text" placeholder="Enter title" name="title" required [(ngModel)]="textValue"> 
+      <input type="text" placeholder="Enter content" name="content" required [(ngModel)]="textcontent">
+      <button type="submit" class="btn" (click)="doneEditTask()">submit</button>
+    </form>
+  </div>
+</div>
+<br>

@@ -1,0 +1,11 @@
+body text color : hsl(300, 43%, 22%)
+body font-size: 15px;
+
+
+testimonial background text color : hsl(300, 43%, 22%);
+person job title text color : hsl(333, 80%, 67%);
+
+
+star reviewed cards bakground color : hsl(300, 24%, 96%);
+
+
